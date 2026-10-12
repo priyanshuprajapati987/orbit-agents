@@ -9,3 +9,8 @@ dist/
 .pytest_cache/
 vault/
 *.log
+
+orbit_data/
+*.vbs
+*.log
+
