@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use ORBIT Multi-Agent Framework, cite it as below."
+title: "ORBIT Multi-Agent Framework"
+authors:
+  - family-names: Prajapati
+    given-names: Priyanshu
+version: "3.7.0"
+date-released: "2026-10-12"
+license: Elastic-2.0
+repository-code: "https://github.com/priyanshuprajapati987/orbit-agents"
+keywords: [multi-agent, ai, orchestrator, llm, framework]
