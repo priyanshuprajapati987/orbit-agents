@@ -65,7 +65,8 @@ export OLLAMA_URL=http://localhost:11434
 ```
 
 Full runnable demo: [`examples/hello_orbit.py`](examples/hello_orbit.py)
-(Queen -> Planner -> Executor -> specialist, end to end).
+(Queen -> Planner -> Executor -> specialist, end to end) - verified
+running against a local Ollama model with live web-search tool calls.
 
 ## Repository layout
 
@@ -82,9 +83,19 @@ orbit/
 
 ## Contributing
 
-Want to add a specialist agent? Create `orbit/orbit/agents/my_agent.py`
-subclassing `BaseAgent`, register it in `AGENT_REGISTRY`, add it to the
-docs table above, and open a PR. See existing agents for the pattern.
+Full step-by-step guide (add a specialist agent in 5 steps, code
+conventions, scope rules): **[CONTRIBUTING.md](CONTRIBUTING.md)**
+
+## Provenance
+
+Every source file carries an `ORBIT-TRACE` header, and the package exposes a
+runtime marker:
+
+```python
+from orbit.orbit._fingerprint import fingerprint, verify
+fingerprint()   # 'OBP-2026-4a77efcb85bd43f3'
+verify()        # True on an original build
+```
 
 ## License
 
@@ -93,8 +104,9 @@ redistribute with attribution; you may **not** provide the software to
 third parties as a hosted or managed service, and derivative works must
 remain under ELv2.
 
-Dual licensing available for commercial integration: contact the author
-via GitHub.
+**Dual licensing** for commercial embedding/hosting/OEM: see
+[LICENSE-COMMERCIAL.md](LICENSE-COMMERCIAL.md) - contact the author via
+GitHub.
 
 ## Author
 
